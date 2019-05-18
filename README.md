@@ -1,4 +1,4 @@
-# [C Classroom](https://classroom.github.com/a/f6W1QBDC)
+# [C Classroom](https://classroom.github.com/classrooms/49954342-taller-programacion-classroom)
 
 ### [1. C data types](https://github.com/taller-programacion/C/tree/master/variables)
 ### [2. Control structures](https://github.com/taller-programacion/C/tree/master/control)
