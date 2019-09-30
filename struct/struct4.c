@@ -10,8 +10,12 @@ int main()
       char ciudad[20];
    }persona[20];            // Array de struct con datos para 3 personas.
  
+   puts("¿Cuántos registros deseas?:");
+   scanf("%d", &reg);
+   getchar();
+ 
    int i, numero=0;
-   for (i=0; i<2; i++) //Pide datos de 3 personas y los guarda en el fichero.
+   for (i=0; i<reg; i++) //Pide datos de 3 personas y los guarda.
       {
          puts("Nombre:");
  	 fflush(stdin);
@@ -23,7 +27,7 @@ int main()
  	 fflush(stdin);
  	 fgets(persona[i].ciudad, 20 , stdin);
       }
-   for (i=0; i<2; i++) 
+   for (i=0; i<reg; i++) 
       {
         printf("Registro:%d\n\tNombre:%s\tEdad:%d\n\tCiudad:%s",i+1, persona[i].nombre, persona[i].edad, persona[i].ciudad);   
         getchar();   
