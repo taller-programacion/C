@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<stdbool.h>// Boolean
+#include <stdbool.h>// Boolean
 
 bool COvid = true;
 int cuarentena = 20;
@@ -7,9 +7,9 @@ int cuarentena = 20;
 void come(); //Declaración de función
 void duerme();
 void codifica();
-void quedateEnCasa();
+void quedateEnCasa(int x);
 
-int main() {
+int main(){
 	while(COvid != false){
 		for(int x=1; x<=cuarentena; x++){
 			printf("-----------------");
@@ -31,7 +31,7 @@ void duerme(){
 	return;
 }
 void codifica(){ //Implementación de función
-	printf("Programa\n");
+	printf("Programar sin parar\n");
 	return;
 }
 void quedateEnCasa(int dia){ //Implementación de función
