@@ -3,7 +3,7 @@
 long factorial(int n)
 {
 	if (n == 0) /* caso base */
-		return 1; /* como 0! = 1, se retorna 1*/
+		return 1; /* como 0! = 1, regresa 1*/
 	else
 		return n * factorial (n - 1); /* llamada a esta misma función */
 }
