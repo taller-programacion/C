@@ -7,7 +7,6 @@ void sumar_valor(int numero); /* prototipo de la función */
 int main(void)
 {
 	int numero = 57;
-
 	sumar_valor(numero); /* enviamos numero a la función */
 
 	printf("Valor de numero dentro de main() es: %d\n", numero);
