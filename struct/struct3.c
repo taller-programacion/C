@@ -1,16 +1,11 @@
 #include <stdio.h> // Archivo de cabecera para subrutinas de e/s
 #include <stdlib.h> // Archivo de cabecera para subrutinas de utilidades
-
-struct biblioteca { // Crea la estructura del registro
-	char codigo[10];
-	char titulo[50];
-	char autor[50];
-}libro;
+#include "data3.h"
 
 int main()
 { // Inicio
  system("clear"); // Limpia pantalla
- struct biblioteca libro2;
+ //struct biblioteca libro2;
  // Ingresa datos del registro
  fflush(stdin);
  printf("Ingrese el codigo:");
