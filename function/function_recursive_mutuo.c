@@ -4,16 +4,16 @@ void funB(char num);
 
 int main(void)
 {
-	funA('Z'); 
+	funA('A'); 
 	return 0;
 }
 void funA(char num)
 {
-	if (num > 'A') 
+	if (num < 'Z') 
 		funB(num);
 	printf("%c ,", num);
 }
 void funB(char num)
 {
-	funA(--num); 
+	funA(++num); 
 }

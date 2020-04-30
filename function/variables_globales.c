@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Declaración de variables
+//Declaración de variables globales
 int entero1 = 3;
 int entero2 = 30;
 int resultado = 0;

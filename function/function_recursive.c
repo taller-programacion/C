@@ -11,7 +11,7 @@ long factorial(int n)
 int main(void)
 {
 	/* en este caso se llama a la función y se imprime directamente*/
-	printf("%ld ", factorial(3));
+	printf("%ld\n ", factorial(-10));
 
 	return 0;
 }
