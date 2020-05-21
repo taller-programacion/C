@@ -38,7 +38,7 @@ stream: Puntero a objetos FILE, que especifica la cadena de entrada.
               printf("\n\tnum\tNombre\tPromedio\n");
 
               while(fread(&fca,sizeof(fca),1,fp)>0)
-                  printf("\n\t%d\t%s\t%f",fca.num,fca.nombre,fca.promedio);
+                  printf("\n\t%d\t%s\t%f\n",fca.num,fca.nombre,fca.promedio);
 
               fclose(fp);
        }

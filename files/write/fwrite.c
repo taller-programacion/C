@@ -14,7 +14,7 @@
               char ch;
               struct Estudiante fca;
 
-              fp = fopen("FCA.txt","at+");            //Statement   1
+              fp = fopen("FCA.txt","a+");            //Statement   1
 
               if(fp == NULL)
               {
@@ -34,6 +34,11 @@
                       printf("Promedio : ");
                       scanf("%f",&fca.promedio);
 
+		      //fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
+		      //ptr − Apuntador al arreglo de elementos que se escribiran.
+		      //size − Tamaño en bytes de cada elemento
+		      //nmemb − Numero de elementos
+		      //stream − Aputador al archivo donde se escribirá.
                       fwrite(&fca,sizeof(fca),1,fp);
             		getchar();
 
