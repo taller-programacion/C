@@ -3,10 +3,10 @@
 int suma(int entero1, int entero2); //Declaración de función
 
 void main() {
-    printf("El resultado de la primera suma es:  %d\n", suma(200,15));
-    printf("El resultado de la segunda suma es:  %d\n", suma(1,500));
-    printf("El resultado de la tercera suma es:  %d\n", suma(1000,1500));
-    return;
+    printf("El resultado de la primera suma es:  %d\n\n", suma(200,15));
+    printf("El resultado de la segunda suma es:  %d\n\n", suma(1,500));
+    printf("El resultado de la tercera suma es:  %d\n\n", suma(1000,1500));
+    return ;
 }
 
 int suma(int entero1, int entero2){ //Implementación de función
