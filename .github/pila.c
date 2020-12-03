@@ -1,10 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-main(){
-    int vector [10];
-    int i;
+int main () {
+    int x, numero, factorial = 1;
+    printf ("Ingrese un numero: \n");
+    scanf ("%d", &numero);
 
-        for (i=0; i<10; i++) vector [i] = i;
-        for (i=0; i<10;) printf ("%d", vector [i]);
-
+    for (x = numero; x > 1; x-- )
+    {
+        factorial *= x;
+    }
+    printf ("Factorial: %d\n", factorial);
 }
