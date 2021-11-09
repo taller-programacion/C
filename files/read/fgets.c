@@ -20,7 +20,7 @@ int main()
  	    printf("\nEl contenido del archivo de prueba es \n\n");
  	    while (feof(archivo) == 0)
  	    {
- 		fgets(caracteres,10,archivo);
+ 		fgets(caracteres,100,archivo);
  		printf("%s",caracteres);
  	    }
             getchar();

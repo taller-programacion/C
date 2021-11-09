@@ -14,23 +14,20 @@ stream: Puntero a objetos FILE, que especifica la cadena de entrada.
 #include<stdio.h>
 #include<stdlib.h>
 
-       struct Estudiante
-       {
+       struct Estudiante{
               int num;
               char nombre[25];
               float promedio;
        };
 
-       void main()
-       {
+       void main(){
               FILE *fp;
               char ch;
               struct Estudiante fca;
 
               fp = fopen("FCA.txt","r");            //Statement   1
 
-              if(fp == NULL)
-              {
+              if(fp == NULL){
                      printf("\nError.");
                      exit(0);
               }

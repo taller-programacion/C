@@ -1,10 +1,13 @@
 #include <stdio.h> // Archivo de cabecera para subrutinas de e/s
 #include <stdlib.h> // Archivo de cabecera para subrutinas de utilidades
-int main()
-{ // Inicio
- system("clear"); // Limpia pantalla
- printf("2 == 2 devuelve %d que implica verdadero\n",2==2);
- printf("'A' == 'a' devuelve %d que implica falso\n",'A'=='a');
+int main(){ // Inicio
+printf("2 == 2 devuelve %i \n",2==2); //true 1
+printf("2 !== 2 devuelve %i \n",2!=2); //true 1
+printf("2 > 2 devuelve %i \n",2>2); //true 1
+printf("2 < 2 devuelve %i \n",2<2); //true 1
+printf("2 <= 2 devuelve %i \n",2<=2); //true 1
+printf("2 !== 2 devuelve %i \n",2>=2); //true 1
+ /*printf("'A' == 'a' devuelve %d que implica falso\n",'A'=='a');
  printf("2 != 2 devuelve %d que implica falso\n",2!=2);
  printf("'A' != 'a' devuelve %d que implica verdadero\n",'A'!='a');
  printf("'a' > 'b' devuelve %d que implica verdadero\n",'a'>'Z');
@@ -15,5 +18,7 @@ int main()
  printf("'A' < 'B' devuelve %d que implica falso\n",'Z'>'a');
  printf("6 <= 6 devuelve %d que implica verdadero\n",6<=6);
  printf("8 <= 7 devuelve %d que implica falso\n",8<=7);
- return 0;
+*/ 
+
+return 0;
 } // Fin de programa

@@ -3,12 +3,11 @@
 
 int main()
 {
-   struct datos
-   {
+   struct datos{
       char nombre[60];
       int edad;
       char ciudad[20];
-   }persona[2];            // Array de struct con datos para 2 personas.
+   }persona[3];            // Array de struct con datos para 2 personas.
 
 /*Files*/
 /*"r" : abrir un archivo para lectura, el fichero debe existir.
@@ -28,18 +27,22 @@ int main()
       printf("No se pudo abrir el archivo :(\n");
    else
    {
-      for (i=0; i<2; i++) //Pide datos de 2 personas y los guarda en el fichero.
-      {
+      for (i=0; i<3; i++){ //Pide datos de 2 personas y los guarda en el fichero.
          puts("Nombre:");
- 	 fgets(persona[i].nombre, 60 , stdin);
+ 	      fgets(persona[i].nombre, 60 , stdin);
+         //Escribir en archivos
          fprintf(fichero, "%s", persona[i].nombre);
+         
          puts("Edad:");
          scanf("%d", &persona[i].edad);
          getchar();
+
          fprintf(fichero, "%d", persona[i].edad);
          puts("Ciudad:");
- 	 fgets(persona[i].ciudad, 20 , stdin);
-         fputs(persona[i].ciudad, fichero);
+
+ 	      fgets(persona[i].ciudad, 20 , stdin);
+         fputs(persona[i].ciudad, fichero); // Escribir Archivo
+
       }
    }
    fclose(fichero);

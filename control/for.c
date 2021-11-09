@@ -1,26 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <conio.h>
-//#include <curses.h>
 
-int main(void)
-{
-  int x,y,z,cont;
-
-  x=0;
-  y=1;
+int main(void){
+  int cont=1;
+  /*
+  for(inicio; fin; incremento/decremento){
+    //TODO
+  }
+  */
  
- 
-  for (cont=1;cont<=5;cont++)
-  {
-      
-      x=cont+y;
-      printf("%d\n",x);
-      y++;
+  for (cont=0;cont<=100;cont++){ //cont = 4; 4<=3
+      //x=cont+y;
+      printf("\tValor: %d\n",cont); //Valor: 3\n
+      if(cont==50){
+        break;
+      }
+      //y++;
       /*x=y;
       y=z;*/
   }
-  printf("Valor final: %d\n",cont);
+  printf("Valor final: %d\n",cont); //Valor final : 4\n
   getchar();
   return 0;
 }

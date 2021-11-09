@@ -3,11 +3,11 @@
 
 int main()
 {
-    int *ptr, i , n1, n2;
+    int *ptr, i , n1, n2; //Declarado variables
     printf("Ingresa tamaño de arreglo: ");
     scanf("%d", &n1);
 
-    ptr = (int*) malloc(n1 * sizeof(int));
+    ptr = (int*) malloc(n1 * sizeof(int));  //Alojando memoria
 
     printf("Dirección  de memoria reservada:\n");
     for(i = 0; i < n1; ++i)
@@ -15,6 +15,7 @@ int main()
 
     printf("\nIngresa nuevo tamño de arreglo: ");
     scanf("%d", &n2);
+   //realloc(arreglo, nuevaCantidad * tipoDato) 
     ptr = realloc(ptr, n2 * sizeof(int));
 
     printf("Nuecva Dirección de memoria reservada: \n ");

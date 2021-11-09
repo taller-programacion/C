@@ -1,11 +1,11 @@
 	.file	"area.c"
 	.text
 	.section	.rodata
-.LC2:
-	.string	"Area"
 .LC3:
-	.string	"Area de Circulo con radio 5:"
+	.string	"Area"
 .LC4:
+	.string	"Area de Circulo con radio 5:"
+.LC5:
 	.string	"%s%f\n\n"
 	.text
 	.globl	main
@@ -20,16 +20,31 @@ main:
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
 	movss	.LC0(%rip), %xmm0
-	movss	%xmm0, -4(%rbp)
-	movss	.LC1(%rip), %xmm0
 	movss	%xmm0, -8(%rbp)
-	movl	$.LC2, %edi
-	call	puts
-	cvtss2sd	-8(%rbp), %xmm0
-	movl	$.LC3, %esi
-	movl	$.LC4, %edi
+	pxor	%xmm2, %xmm2
+	cvtss2sd	-8(%rbp), %xmm2
+	movq	%xmm2, %rax
+	movsd	.LC1(%rip), %xmm0
+	movapd	%xmm0, %xmm1
+	movq	%rax, %xmm0
+	call	pow@PLT
+	movsd	.LC2(%rip), %xmm1
+	mulsd	%xmm1, %xmm0
+	cvtsd2ss	%xmm0, %xmm0
+	movss	%xmm0, -4(%rbp)
+	leaq	.LC3(%rip), %rax
+	movq	%rax, %rdi
+	call	puts@PLT
+	pxor	%xmm3, %xmm3
+	cvtss2sd	-4(%rbp), %xmm3
+	movq	%xmm3, %rax
+	movq	%rax, %xmm0
+	leaq	.LC4(%rip), %rax
+	movq	%rax, %rsi
+	leaq	.LC5(%rip), %rax
+	movq	%rax, %rdi
 	movl	$1, %eax
-	call	printf
+	call	printf@PLT
 	movl	$0, %eax
 	leave
 	.cfi_def_cfa 7, 8
@@ -41,8 +56,13 @@ main:
 	.align 4
 .LC0:
 	.long	1084227584
-	.align 4
+	.align 8
 .LC1:
-	.long	1117590651
-	.ident	"GCC: (GNU) 9.1.1 20190503 (Red Hat 9.1.1-1)"
+	.long	0
+	.long	1073741824
+	.align 8
+.LC2:
+	.long	776530087
+	.long	1074340351
+	.ident	"GCC: (GNU) 11.1.0"
 	.section	.note.GNU-stack,"",@progbits
