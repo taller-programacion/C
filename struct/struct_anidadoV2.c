@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
+  Iterar
+   Meter arreglos
+*/
+
 struct info{
 	char nombre[25];
 	char apPaterno[25];
