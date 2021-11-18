@@ -1,25 +1,58 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-    int *ptr, i , n1, n2; //Declarado variables
-    printf("Ingresa tamaño de arreglo: ");
-    scanf("%d", &n1);
+/*Declaración e implementación de función*/
+int Cantidad(){
+    int valor;
+    printf("Números que deseas guardar: ");
+    scanf("%i", &valor); //valor = 5
+    return valor; // return 5;
+}
 
-    ptr = (int*) malloc(n1 * sizeof(int));  //Alojando memoria
+void leerNumeros(int cantidad, int *numeros) { // 2, float *numeros
+    for (int i =0;i < cantidad; i++) { // 2 < 2
+	   printf("\nNúmero %d:",i + 1); // Número 1 + 1 = 2 --> Número 2 
+        scanf("%d",&numeros[i]); //  &numeros[1] = 5
+    }
+}
 
+void imprimirNumeros(int cantidad, int *numeros) {  //2, float * numeros
+    for (int i=0;i < cantidad; i++) { //2 < 2
+        printf("\nNúmero %d : %d ", i+1, numeros[i]); 
+        // Número 1 : 10 ", 0+1, numeros[0]
+        // Número 2 : 5 ", 1+1, numeros[1]
+    }
+}
+
+int main(){
+
+    int *ptr; //Declarado variables
+    
+    int n = Cantidad(); // n1 = 2
+
+    ptr = (int*) malloc(n * sizeof(int));  //Alojando memoria
+    // malloc(2 * 4) --> 8 bytes;
+     
     printf("Dirección  de memoria reservada:\n");
-    for(i = 0; i < n1; ++i)
-         printf("%u\t%p\n", *ptr +i, &ptr + i);
+    for(int i = 0; i < n; ++i){
+         printf("%u\t%p\n", *ptr +i, &ptr + i); //Imprimiendo direcciones de memoria
+    }
+    leerNumeros(n, ptr);
+    imprimirNumeros(n, ptr);
 
-    printf("\nIngresa nuevo tamño de arreglo: ");
-    scanf("%d", &n2);
+    printf("\nIngresa nuevo tamaño de arreglo\n");
+    n = Cantidad(); // n1 = 2
+   
    //realloc(arreglo, nuevaCantidad * tipoDato) 
-    ptr = realloc(ptr, n2 * sizeof(int));
+    ptr = realloc(ptr, n * sizeof(int));
+    //realloc(ptr, 5 * 4) ---> realloc(ptr, 20 bytes)
 
-    printf("Nuecva Dirección de memoria reservada: \n ");
-    for(i = 0; i < n2; ++i)
-         printf("%u\t%p\n", *ptr +i, &ptr + i);
+    printf("Nueva Dirección de memoria reservada: \n");
+    for(int i = 0; i < n; ++i){
+         printf("%u\t%p\n", *ptr +i, &ptr + i); //Imprimiendo direcciones de memoria
+     }
+    leerNumeros(n, ptr);
+    imprimirNumeros(n, ptr);
+    
     return 0;
 }
