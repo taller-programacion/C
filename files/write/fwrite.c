@@ -8,13 +8,13 @@
               float promedio;
        };
 
-       void main(){
+       int main(){
               FILE *fp;  // Declaración de archivo
               
               char ch;
               struct Estudiante fca; //Implementacmos struct
 
-              fp = fopen("FCA.txt","a"); //Apertura del archivo
+              fp = fopen("../read/FCA.txt","w"); //Apertura del archivo
               //1.- Abrir el archivo
               //2.- Lectura / Escrituro
               //3.- Guardar
@@ -26,8 +26,8 @@
               }
 
               do{
-                      printf("\nNum Cuenta : ");
-                      scanf("%d",&fca.num);
+                     printf("\nNum Cuenta : ");
+                     scanf("%d",&fca.num);
 
 		      //  fflush(stdin);
          	        puts("Nombre:");
@@ -51,4 +51,5 @@
               printf("\nEscribiendo archivo...");
 
               fclose(fp);  //Cierre de archivo
+              return 0;
        }

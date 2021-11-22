@@ -20,7 +20,7 @@ stream: Puntero a objetos FILE, que especifica la cadena de entrada.
               float promedio;
        };
 
-       void main(){
+       int main(){
               FILE *fp;
               char ch;
               struct Estudiante fca;
@@ -36,6 +36,6 @@ stream: Puntero a objetos FILE, que especifica la cadena de entrada.
 
               while(fread(&fca,sizeof(fca),1,fp)>0)
                   printf("\n\t%d\t%s\t%f\n",fca.num,fca.nombre,fca.promedio);
-
               fclose(fp);
+              return 0;
        }

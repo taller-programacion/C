@@ -20,10 +20,9 @@ int main()
         else
         {
             printf("\nEl contenido del archivo de prueba es \n\n");
-            while((caracter = fgetc(archivo)) != EOF)
-	    {
-		printf("%c",caracter);
-	    }
+            while((caracter = fgetc(archivo)) != EOF){ //End Of File caracter = EOF != EOF
+		        printf("%c",caracter);  //Daniel\n34...XEND
+	        }
         }
         fclose(archivo);
 	return 0;
