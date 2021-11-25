@@ -2,16 +2,17 @@
 #include <limits.h>
 #include <float.h>
 
-int main()
-{
-printf("Tamaño de datos básicos\n");
-printf("=======================\n");
-printf("Tipo\tTamaño en bytes\n");
-printf("====\t===============\n");
-printf("char\t%ld\n",sizeof(char));
-printf("string\t%ld\n",sizeof(char[50]));
-printf("int\t%ld\n",sizeof(int));
-printf("float\t%ld\n",sizeof(float));
-printf("double\t%ld\n",sizeof(double));
-return 0;
+int main(void){
+    printf("Tamaño de datos básicos\n");
+    printf("=======================\n");
+    printf("Tipo\tTamaño en bytes\n");
+    printf("====\t===============\n");
+    
+    printf("char\t%ld\n",sizeof(char)); //¿De qué tamaño es un char?
+    printf("string\t%ld\n",sizeof(char[50])); //¿De qué tamaño es un char de 50 espacios (strings)?
+    printf("int\t%ld\n",sizeof(int)); //¿De qué tamaño es un entero?
+    printf("float\t%ld\n",sizeof(float)); //¿De qué tamaño es un flotante?
+    printf("double\t%ld\n",sizeof(double)); //¿De qué tamaño es un flotante double?
+    
+    return 0;
 }

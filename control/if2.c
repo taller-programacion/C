@@ -1,25 +1,36 @@
 #include <stdio.h>
-int main()
-{
-	int edad;
-	printf("Introduce tu edad: ");
-	scanf("%d",&edad);
+//Comparar edades
+int main(){
 
-	if (edad >17 && edad <35)
-	{
-		 printf("Tienes %d anios, eres mayor de edad",edad);
+	int edad=0;
+	
+	printf("Introduce tu edad [0-150]: ");
+	scanf("%d",&edad); // 30
+
+   //operadores lógicos
+   // AND -> &&
+   // OR -> ||
+   // NOT -> !
+	if (edad > 0 && edad <= 12){ // 1 - 12
+		 printf("Eres generación alpha y tienes %d",edad);
+		 if(edad < 9){
+			 printf("\nEres un infante");
+		 }else{
+			 printf("\nEres aborrecente");
+		 }
+	}else if (edad > 12 && edad <= 25){ // else if (30 < 25) -> false
+		 printf("Eres generación y, y tienes %d anios",edad);
+	// 35....32605
+	}else if (edad > 25 && edad <= 45){ // else if (30 < 25) -> false
+		 printf("Eres generación x, y tienes %d anios",edad);
+	// 35....32605
+	}else if (edad > 45 && edad < 150){ // else if (30 < 25) -> false
+		 printf("Eres generación BB, y tienes %d anios",edad);
+	// 35....32605
 	}
-	else if (edad < 17)
-	{
-		 printf("Tienes %d anios, eres menor de edad",edad);
+	else{
+		 printf("Introduce una edad válida [0-150]");
 	}
-	else if (edad >= 35)
-	{
-		 printf("Tienes %d anios, eres chavo-ruco",edad);
-	}
-	else
-	{
-		 printf("Tienes %d anios, ",edad);
-	}
+	printf("\nFin programa");
   return 0;
-} 	
+}

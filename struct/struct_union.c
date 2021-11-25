@@ -2,15 +2,13 @@
 #include <string.h>
 
 /*Creamos una union*/
-union mensajesUnion 
-{
+union mensajesUnion{
 	char bienvenida[25];
 	char nombre[25];
 } saludoUnion;
 
 /*Creamos una estructura*/
-struct mensajesStrc
-{
+struct mensajesStruct{
 	char bienvenida[25];
 	char nombre[25];
 }saludoStruct;
@@ -26,7 +24,15 @@ int main(){
 	/*Copiamos cadenas*/
 	strcpy(saludoUnion.bienvenida, "Hola");
 	strcpy(saludoUnion.nombre, "Juan");
-	
+
+	scanf("%s", saludoUnion.bienvenida);
+
+	scanf("%s", saludoUnion.nombre);
+	//saludoUnion.nombre[20]="Ho";
+	fgets(saludoUnion.bienvenida, 25, stdin);
+	fgets(saludoUnion.nombre, 25, stdin);
+
+
 	printf("\nUnion: ");
 	
 	/*Imprimimos mensajes de union*/

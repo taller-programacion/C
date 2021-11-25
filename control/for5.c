@@ -7,17 +7,33 @@ int main(void)
 
   x=0;
   y=1;
+  z=0;
  
   printf("Cuantos números deseas: ");
   scanf("%d", &stop);
 
-  printf("1\n");
-  for (cont=0;cont<stop;cont++)
-  {
-      z=x+y;
+  //printf("0\n1\n");
+  //for(inicio; paro; incremento/decremento){}
+  if(stop<=2){
+    for (cont=0;cont<stop;cont++){
+        //printf("%d\n",z);  //z = 1
+        z=x+y;  //z = 1 + 1= 2
+        printf("%d\n",z);
+        x=y;  //x=1
+        y=z;  //y=2
+    }  
+  }else{
+  for (cont=2;cont<stop;cont++){
+    if(z==0 || z ==1){
       printf("%d\n",z);
-      x=y;
-      y=z;
+    }
+
+      //printf("%d\n",z);  //z = 1
+      z=x+y;  //z = 1 + 1= 2
+      printf("%d\n",z);
+      x=y;  //x=1
+      y=z;  //y=2
+  }
   }
  
   getchar();

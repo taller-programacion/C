@@ -18,11 +18,18 @@ int main()
  	else
         {
  	    printf("\nEl contenido del archivo de prueba es \n\n");
- 	    while (feof(archivo) == 0)
- 	    {
- 		fgets(caracteres,10,archivo);
- 		printf("%s",caracteres);
+		fflush(archivo);
+ 	    while (feof(archivo) == 0){
+			//fgets(salida, tamañoBuffer, entrada);	
+ 			fgets(caracteres,100,archivo);
+ 			printf("%s",caracteres);
+			/*
+			caracteres[0]="D";
+			caracteres[1]="a";
+			caracteres[2]="n";
+			*/
  	    }
+			fflush(archivo);
             getchar();
         }
         fclose(archivo);

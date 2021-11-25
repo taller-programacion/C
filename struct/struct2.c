@@ -2,8 +2,7 @@
 #include <stdlib.h> // Archivo de cabecera para subrutinas de utilidades
 #include "data.h" // Archivo de cabecera para subrutinas de utilidades
 
-int main()
-{ 
+int main(){ 
  printf("Ingrese el codigo:");
  scanf("%d",&libro.code);
  printf("Ingrese el título del libro:");
