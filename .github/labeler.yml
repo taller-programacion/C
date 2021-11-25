@@ -15,10 +15,7 @@
   
 "Pointers":
   - "pointer/*/*"
-  
-"Structures":
-  - "struct/*/*"
-  
+
 "Dynamic Memory":
   - "memory/*/*"
   
