@@ -1,4 +1,5 @@
 # [C Classroom](https://classroom.github.com/classrooms/49954342-taller-programacion-classroom)
+[![wakatime](https://wakatime.com/badge/user/bbd1ffab-8ecd-4925-89f8-871387792d21/project/c8217ee0-b696-4768-a581-acf1cb728c15.svg)](https://wakatime.com/badge/user/bbd1ffab-8ecd-4925-89f8-871387792d21/project/c8217ee0-b696-4768-a581-acf1cb728c15)
 
 ### [1. Introduction](https://github.com/taller-programacion/C/tree/master/introduction)
 ### [2. C data types](https://github.com/taller-programacion/C/tree/master/variables)
