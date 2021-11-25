@@ -11,7 +11,7 @@ struct info{
 	char apPaterno[25];
 	char apMaterno[25];
 	char direccion[25];
-}; 
+};
 
 struct academico{
 	char numeroEmpleado[13];

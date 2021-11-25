@@ -16,7 +16,7 @@ struct info{
 struct academico{
 	char numeroEmpleado[13];
 	struct info datos_profesor;
-}profesor; 
+}profesor;
 
 struct alumnado{
 	char numeroCuenta[13];
@@ -35,7 +35,7 @@ int main(void){
 
 	if(op == 1){
 		getchar();
-		printf("Dame número empleado: ");
+		printf("Dame número empleado:");
 		fflush(stdin);
 		fgets(profesor.numeroEmpleado,13,stdin);
 		printf("Dame nombre: ");

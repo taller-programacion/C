@@ -22,14 +22,16 @@ int main(){
 	 * Los elementos dentro de la union comparten esos 25 bytes.
 	 */
 	/*Copiamos cadenas*/
-	saludoUnion.bienvenida[*0]="";
 	strcpy(saludoUnion.bienvenida, "Hola");
 	strcpy(saludoUnion.nombre, "Juan");
 
 	scanf("%s", saludoUnion.bienvenida);
 
-	scanf("%s", &saludoUnion.nombre);
+	scanf("%s", saludoUnion.nombre);
 	//saludoUnion.nombre[20]="Ho";
+	fgets(saludoUnion.bienvenida, 25, stdin);
+	fgets(saludoUnion.nombre, 25, stdin);
+
 
 	printf("\nUnion: ");
 	

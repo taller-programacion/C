@@ -14,20 +14,22 @@ struct datos{
 FILE *archivo;
 
 //Función para remover el salto de línea final
-void remueveSaltoLinea (char *cadena){  //Luis Juárez\n
+void remueveSaltoLinea (char *cadena){
   char *saltoLinea;
-  saltoLinea = strchr (cadena, '\n'); //Buscar un caracter en una cadena //saltoLinea = '0x9093920192'
-  if (saltoLinea) //if (0x9093920192)
-    *saltoLinea = '\0'; //Luis Juárez\0
+  saltoLinea = strchr (cadena, '\n'); //Buscar un caracter en una cadena
+  if (saltoLinea) 
+    *saltoLinea = '\0';
 }
+
+//Variables
+int numReg = 0;
 
 //Función de captura de datos y escritura en archivo .csv
 void capturaDatos(){
-    for (int i=0; i<2; i++){ //Pide datos de 2 personas y los guarda en el archivo.
+    for (int i=0; i<numReg; i++){ 
         /*Capturando los registros y almacenando en el struct*/
         printf("Dame el Nombre: ");
         //persona[0].nombre, 60, stdin 
-        // Daniel Morales Juarez\n
         fgets(persona[i].nombre, 60 , stdin);
         fflush(stdin);
         //Remover el salto de línea final
@@ -67,6 +69,11 @@ int main(){
         SEEK_END // Posición respecto al final del archivo   (2)
         */
         int size = ftell(archivo);
+
+        //Preguntando por registros al usuario
+        printf("¿Cuántos registros necesitas?: ");
+        scanf("%d", &numReg);
+        getchar();
 
         if (size == 0) {
             fputs("Nombre| Edad| Ciudad| Teléfono\n", archivo);
