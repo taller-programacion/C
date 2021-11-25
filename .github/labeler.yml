@@ -1,0 +1,29 @@
+"Introduction":
+  - "introduction/*/*"
+
+"Data types":
+  - "variables/*/*"
+  
+"Control Structures":
+  - "control/*/*"
+  
+"Functions":
+  - "function/*/*"
+  
+"Structures":
+  - "struct/*/*"
+  
+"Pointers":
+  - "pointer/*/*"
+  
+"Structures":
+  - "struct/*/*"
+  
+"Dynamic Memory":
+  - "memory/*/*"
+  
+"Files":
+  - "files/*/*"
+
+"Exercises":
+  - "exercises/*/*"
