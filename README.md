@@ -3,7 +3,6 @@
 [![Labeler](https://github.com/taller-programacion/C/actions/workflows/label.yml/badge.svg?branch=master)](https://github.com/taller-programacion/C/actions/workflows/label.yml)
 [![Greetings](https://github.com/taller-programacion/C/actions/workflows/greetings.yml/badge.svg)](https://github.com/taller-programacion/C/actions/workflows/greetings.yml)
 [![wakatime](https://wakatime.com/badge/user/bbd1ffab-8ecd-4925-89f8-871387792d21/project/c8217ee0-b696-4768-a581-acf1cb728c15.svg)](https://wakatime.com/badge/user/bbd1ffab-8ecd-4925-89f8-871387792d21/project/c8217ee0-b696-4768-a581-acf1cb728c15)
-[![WakaTime Coding Statistics](https://github.com/taller-programacion/C/actions/workflows/main.yml/badge.svg)](https://github.com/taller-programacion/C/actions/workflows/main.yml)
 
 ### [1. Introduction](https://github.com/taller-programacion/C/tree/master/introduction)
 ### [2. C data types](https://github.com/taller-programacion/C/tree/master/variables)
