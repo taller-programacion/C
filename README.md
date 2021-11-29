@@ -14,8 +14,6 @@
 ### [8. Files](https://github.com/taller-programacion/C/tree/master/files)
 ### [9. Exercises](https://github.com/taller-programacion/C/tree/master/exercises)
 
-<img src="https://github.com/taller-programacion/C/blob/master/images/codeStats.svg" alt="Alternative Text"/>
-
 # [MIT License](https://github.com/taller-programacion/C/blob/master/LICENSE)
 
 Copyright (c) 2020 [Daniel de J. Rosales M.](https://dannascornell.github.io/)
