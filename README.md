@@ -16,7 +16,7 @@
 
 # [MIT License](https://github.com/taller-programacion/C/blob/master/LICENSE)
 
-Copyright (c) 2020 [Daniel de J. Rosales M.](https://dannascornell.github.io/)
+Copyright (c) 2021 [Daniel de J. Rosales M.](https://dannascornell.github.io/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
