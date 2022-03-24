@@ -7,27 +7,34 @@ char nomMateria; //Variable Global
 double promedio = 0;
 
 int main(){
-    int cont;
-    double calificaciones[]={}; 
-    printf("Dame la primera calificacion: ");//Declarando arreglo de flotantes
+    int cont, opt;
+    double calificaciones[10] ={ 9, 5, 5, 10};
+    char nombres[20][20];
+    printf("\nCuantas calificaciones deseas ingresar: "); 
+    scanf("%i", &opt);
 
-    /*Actividad:
-    1. Pedir cuantas calificaciones capturar
-    2. Preguntar nombre de asignaturas
-    3. Calcular el promedio
-    */
-    scanf("%lf", calificaciones);
+    //Guardar Calificaciones   
+    for(cont = 0; cont < opt; cont++){ // 
+        printf("\n-----------------------------");
+        printf("\nDame la asignatura : ");
+        scanf("%s", nombres[cont]); //nombres = ['I', 'n', 'g', 'l', 'e', 's', '\0', '\0']
 
-    printf("Primera calificacion %f", calificaciones[0]);
+        printf("\nDame la calificacion : ");
+        scanf("%lf", &calificaciones[cont]);  //calificaciones[0] = 10, calificaciones[1] = 9
 
-    for(cont = 0; cont < 7; cont++){
-        printf("Calificacion: %0.2lf\n", calificaciones[cont]);
-
-        promedio += calificaciones [cont];  
+        printf("Calificacion: %0.2lf\n", calificaciones[cont]);   //calificaciones[0] = 10  calificaciones[1] = 9
+        promedio += calificaciones[cont];  
     }
-    printf("Contador final %d\n", cont);
-    printf("\tPromedio: %0.2f\n", promedio/cont);
+    printf("\tPromedio: %0.2f\n", promedio/opt);
+
+    //Consultar Calificaciones
+        printf("\nDame una posición: ");
+        scanf("%i", &opt); // 1
+    
+        printf("Asignatura: %s\n", nombres[opt-1]);   //calificaciones[0] = 10  calificaciones[1] = 9
+        printf("Calificación: %0.2lf\n", calificaciones[opt-1]);   //calificaciones[0] = 10  calificaciones[1] = 9
 
     printf("Fin de programa");
+    
     return 0;
 }
