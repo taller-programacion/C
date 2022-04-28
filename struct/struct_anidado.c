@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h> 
+#include <string.h> 
 
 struct info{
 	char nombre[25];
@@ -20,6 +20,7 @@ struct alumnado{
 }estudiante;
 
 int main(void){
+// strcopy(CadenaDondeSeCopia , CadenaACopiar );
 	strcpy(profesor.datos_profesor.nombre,"Daniel");  //strcpy
 	strcpy(profesor.datos_profesor.nombre,"J");  //strcpy
 	strcpy(profesor.datos_profesor.apPaterno,"Rosales");

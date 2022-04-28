@@ -22,15 +22,15 @@ int main(){
 	 * Los elementos dentro de la union comparten esos 25 bytes.
 	 */
 	/*Copiamos cadenas*/
-	strcpy(saludoUnion.bienvenida, "Hola");
-	strcpy(saludoUnion.nombre, "Juan");
+	strcpy(saludoUnion.bienvenida, "Hola");  
+	strcpy(saludoUnion.nombre, "Juan"); 
 
-	scanf("%s", saludoUnion.bienvenida);
+	//scanf("%s", saludoUnion.bienvenida);
 
-	scanf("%s", saludoUnion.nombre);
+	//scanf("%s", saludoUnion.nombre);
 	//saludoUnion.nombre[20]="Ho";
-	fgets(saludoUnion.bienvenida, 25, stdin);
-	fgets(saludoUnion.nombre, 25, stdin);
+	//fgets(saludoUnion.bienvenida, 25, stdin);
+	//fgets(saludoUnion.nombre, 25, stdin);
 
 
 	printf("\nUnion: ");
@@ -49,7 +49,7 @@ int main(){
 	strcpy(saludoStruct.bienvenida, "Hi");
 	strcpy(saludoStruct.nombre, "Jhon\n");
 	
-	printf("\nStruct: ");
+	printf("\nStruct: \n");
 	
 	/*Imprimimos mensajes de union*/
 	printf("\n1.- %s", saludoStruct.bienvenida);

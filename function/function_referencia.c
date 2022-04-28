@@ -2,13 +2,17 @@
 #include <stdio.h>
 
 int var1 = 57; /* definimos numero con valor de 57*/
-int var2 = 100;
+//int var2 = 100;
 //void sumar_referencia(57){
 // 57 += 1;	--> 58
 //  printf(58);
 //}
 // 57
 void sumar_referencia(int *numero){
+	
+	printf("\nDir de var1: %p\n", &var1); /*0x560bafb28030*/
+	printf("Dir de numero: %p\n", &numero); /*0x560bafb28030*/
+
 //	int *numero = "0x560bafb28030";
 	*numero += 1; /* 57 le sumamos 1 al numero */
 //  num = 57 + 1;
@@ -17,8 +21,7 @@ void sumar_referencia(int *numero){
 }
 
 int main(void){
-	printf("%p\n", &var1); /*0x560bafb28030*/
-	printf("%p\n", &var2); /*0x560bafb28030*/
+
 
 	printf("1.- Valor original de numero es: %d", var1);
 //	sumar_referencia(0x55667f398030);

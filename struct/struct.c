@@ -35,7 +35,7 @@ int main(){ // Inicio
  printf("Ingrese el nombre del autor:");
  scanf("%s",libro.autor);
  // Imprime el registro
- printf("Registro: %d : %s %s\n", libro.codigo, libro.titulo);
+ printf("Registro: %d : %s %s\n", libro.codigo, libro.titulo, libro.);
 
  printf("\nIngrese Revista:\n");
  printf("Ingrese el codigo:");
