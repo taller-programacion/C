@@ -9,16 +9,19 @@ int Cantidad(){
     return valor; // return 5;
 }
 
-void leerNumeros(int cantidad, float *numeros) { // 2, float *numeros
+void leerNumeros(int cantidad, char *numeros) { // 2, float *numeros
     for (int i =0;i < cantidad; i++) { // 2 < 2
+        getchar();
 	    printf("\nNúmero %d:",i + 1); // Número 1 + 1 = 2 --> Número 2 
-        scanf("%f",&numeros[i]); //  &numeros[1] = 5
+        scanf("%c",&numeros[i]); //  &numeros[1] = 5
     }
 }
 
-void imprimirNumeros(int cantidad, float *numeros) {  //2, float * numeros
+void imprimirNumeros(int cantidad, char *numeros) {  //2, float * numeros
     for (int i=0;i < cantidad; i++) { //2 < 2
-        printf("\nNúmero %d : %0.2f ", i+1, numeros[i]); 
+        //printf("\nNúmero %d : %0.2f ", i+1, numeros[i]); 
+        printf("\nNúmero %d : %c \tDirección Memoria: %p", i+1, numeros[i], &numeros[i]);
+
         // Número 1 : 10 ", 0+1, numeros[0]
         // Número 2 : 5 ", 1+1, numeros[1]
     }
@@ -32,9 +35,10 @@ int main(void) {
     /* calloc(n, element-size); */
     /* calloc(5, 4) = 20 bytes */
 
-    float *numeros = (float*) calloc(cantidad, sizeof(float));
+    char *numeros = (char*) calloc(cantidad, sizeof(char)); //
+    //int *numeros = (int*) malloc(cantidad * sizeof(int)); // Malloc
     
-    imprimirNumeros(cantidad, numeros); // imprimirNumeros(5, numeros[])
+    //imprimirNumeros(cantidad, numeros); // imprimirNumeros(5, numeros[])
 
     /*inicializa a 0 la memoria reservada*/
     leerNumeros(cantidad, numeros); // leerNumero(5, numeros[]);

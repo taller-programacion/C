@@ -5,34 +5,37 @@
 
 int Cantidad() {
     int cantidad;
-    printf("Números que deseas guardar: ");
-    scanf("%i", &cantidad);
-    return cantidad;
+    printf("\nNúmeros que deseas guardar: ");
+    scanf("%i", &cantidad); //3  cantidad = 3
+    return cantidad;  // return 3
 }
 
-void leerNumeros(int cantidad, int *numeros) {
+void leerNumeros(int cantidad, int *numeros) {  // 3, 
     for (int i =0;i < cantidad; i++) {
-	    printf("Número %d:",i + 1);
-        scanf("%i",&numeros[i]);
+	    printf("\nNúmero %d:",i + 1);  // 5, 10, 3
+        scanf("%i",&numeros[i]); //numeros[0] = 5  numeros[1] = 10  numeros[2] = 3
     }
 }
 
 void imprimirNumeros(int cantidad, int *numeros) {
     for (int i=0;i < cantidad; i++) {
-        printf("\nNúmero %d : %i ", i+1, numeros[i]);
+        printf("\nNúmero %d : %i \tDirección Memoria: %p", i+1, numeros[i], &numeros[i]);
     }
 }
 
 
 int main(void) {
     //Declaración de variable*/
-    int cantidad = Cantidad(); //int cantidad = 300;
+    int cantidad = Cantidad(); //int cantidad = 3;
     		   /*(cast-type*) malloc(byte-size)*/
     /* Manejo Dinámico de Memoria */
     //                    malloc(30 * 4 bytes)
-    int *numeros = (int*) malloc(cantidad * sizeof(int)); //Aparto el espacio en memoria de forma dinámica
 
-    imprimirNumeros(cantidad, numeros); /*Mostrando los valores*/
+    int *numeros = (int*) malloc(cantidad * sizeof(int)); //Aparto el espacio en memoria de forma dinámica
+  //(int*) malloc(3 * 4 bytes);
+
+    //imprimirNumeros(cantidad, numeros); /*Mostrando los valores*/
+    // 3, numeros
 
 
     leerNumeros(cantidad, numeros); /*Asignando valor a los espacios de memoria */

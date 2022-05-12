@@ -14,7 +14,7 @@
               char ch;
               struct Estudiante fca; //Implementacmos struct
 
-              fp = fopen("../read/FCA.txt","w"); //Apertura del archivo
+              fp = fopen("FCA.txt","w"); //Apertura del archivo
               //1.- Abrir el archivo
               //2.- Lectura / Escrituro
               //3.- Guardar
@@ -41,7 +41,7 @@
 		      //size − Tamaño en bytes de cada elemento
 		      //nmemb − Numero de elementos
 		      //stream − Aputador al archivo donde se escribirá.
-                      fwrite(&fca,sizeof(fca),1,fp);
+                      fwrite(&fca, sizeof(fca), 1,fp);
             		 getchar();
 
                       printf("\nDeseas agrgar otro (s/n) : ");

@@ -6,25 +6,29 @@ int main(){
       char nombre[60];
       int edad;
       char ciudad[20];
-   }persona[3];            // Array de struct con datos para 3 personas.
+   }persona[3];
+
+// Array de struct con datos para 3 personas.
 
 /*Files*/
-/*"r" : abrir un archivo para lectura, el archivo debe existir.
-* "w" : abrir un archivo para escritura, se crea si no existe o se sobreescribe si existe.
-* "a" : abrir un archivo para escritura al final del contenido, si no existe se crea.
-* "r+" : abrir un archivo para lectura y escritura, el archivo debe existir.
-* "w+" : crear un archivo para lectura y escritura, se crea si no existe o se sobreescribe si existe.
-* "r+b ó rb+" : Abre un archivo en modo binario para actualización (lectura y escritura).
-* "rb" : Abre un archivo en modo binario para lectura.
+
+/*
+* "r (read)" : abrir un archivo para lectura, el archivo debe existir.
+* "w (write) : abrir un archivo para escritura, se crea si no existe o se sobreescribe si existe.
+* "a (append)" : abrir un archivo para escritura al final del contenido, si no existe se crea.
+* "r+ (read+)" : abrir un archivo para lectura y escritura, el archivo debe existir.
+* "w+ (write+)" : crear un archivo para lectura y escritura, se crea si no existe o se sobreescribe si existe.
+* "r+b ó rb+ (binary)" : Abre un archivo en modo binario para actualización (lectura y escritura).
+* "rb (binary)" : Abre un archivo en modo binario para lectura.
 */
 
    //ESCRITURA DE ARCHIVO
 
-   FILE *archivo;
-   int i, numero=0;
+   FILE *archivo; //Declaración de archivo
+   int i, numero=0; //Variables
     
 // identificador = fopen("locacionArchivo", "ModoDeApertura");
-   archivo = fopen("gente.txt", "a");  //ABRIR EL ARCHIVO
+   archivo = fopen("../gente.rtf", "a");  //ABRIR EL ARCHIVO
    if (archivo == NULL) // Si no existe
       printf("No se pudo abrir el archivo :(\n");
    else{
@@ -33,7 +37,7 @@ int main(){
  	      fgets(persona[i].nombre, 60 , stdin); //Guardando en struct RAM
          //Escribir en archivos con fprintf
          fprintf(archivo, "%s", persona[i].nombre); //Impresión en archivo DD
-         
+      // fprintf(destino, formato, origen); 
          puts("Edad:");
          scanf("%d", &persona[i].edad);  //Guardando en struct
          getchar(); //Pausa

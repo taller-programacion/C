@@ -21,14 +21,15 @@ int main()
 		fflush(archivo);
  	    while (feof(archivo) == 0){
 			//fgets(salida, tamañoBuffer, entrada);	
- 			fgets(caracteres,100,archivo);
- 			printf("%s",caracteres);
-			/*
-			caracteres[0]="D";
-			caracteres[1]="a";
-			caracteres[2]="n";
-			*/
+ 			fgets(caracteres,100, archivo);
+
+			//fgets(persona[i].nombre, 60 , stdin);
+
+ 			printf("%s\n",caracteres);
  	    }
+ 			printf("\t%c",caracteres[0]);
+			printf("\t%c",caracteres[1]);
+			printf("\t%c",caracteres[2]);
 			fflush(archivo);
             getchar();
         }

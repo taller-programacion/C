@@ -16,7 +16,7 @@ Tipo_dato  *nombre de apuntador;
 
 //Declaración variables
 int num1, num2; //Entero
-int *apuntador; // Apuntador de tipo entero
+int *apuntador = &num1; // Apuntador de tipo entero
 //tipo_dato *identificado;
 
 char valor;  
@@ -26,13 +26,13 @@ char *apuntadorChar; //Declarando apuntadores
 int main (){
 //Variables	
    num1 = 1000;
-   //num2 = 500;
+   num2 = 500;
    valor = '@';
    //num2 = 5; //Asignando un valor
 //Apuntador (variable)
 //scanf("%i", &num1);
 
-   apuntador = &num1;
+   //apuntador = &num1;
    apuntadorChar = &valor;
 
    puts("Apuntando a un entero:");

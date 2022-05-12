@@ -25,7 +25,7 @@ stream: Puntero a objetos FILE, que especifica la cadena de entrada.
               char ch;
               struct Estudiante fca;
 
-              fp = fopen("FCA.txt","r");            //Statement   1
+              fp = fopen("../write/FCA.txt","r");            //Statement   1
 
               if(fp == NULL){
                      printf("\nError.");

@@ -51,14 +51,14 @@ void capturaDatos(){
         remueveSaltoLinea(persona[i].ciudad);
         
         //Escribiendo los datos del struct en un archivo
-        fprintf(archivo, "%s|%i|%s|%i\n", persona[i].nombre, persona[i].edad, persona[i].ciudad, persona[i].telefono);
+        fprintf(archivo, "%s,%i,%s,%i\n", persona[i].nombre, persona[i].edad, persona[i].ciudad, persona[i].telefono);
     }
 }
 
 
 int main(){
 
-    archivo = fopen("datosv2.csv", "a");
+    archivo = fopen("datosv3.xls", "a");
     
     if (archivo != NULL){
         fseek (archivo, 0, SEEK_END);
@@ -76,7 +76,7 @@ int main(){
         getchar();
 
         if (size == 0) {
-            fputs("Nombre| Edad| Ciudad| Teléfono\n", archivo);
+            fputs("Nombre, Edad, Ciudad, Teléfono\n", archivo);
             capturaDatos();
         }else{
             capturaDatos();

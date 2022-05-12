@@ -8,7 +8,9 @@ int var1 = 57; /* definimos numero con valor de 57*/
 //  printf(58);
 //}
 // 57
-void sumar_referencia(int *numero){
+
+void sumar_referencia(int *numero){ //RETURN_TYPE name_of_function ( PARAMETER_TYPE name_of_param,PARAMETER_TYPE name_of_param, etc); 
+
 	
 	printf("\nDir de var1: %p\n", &var1); /*0x560bafb28030*/
 	printf("Dir de numero: %p\n", &numero); /*0x560bafb28030*/
